@@ -7,7 +7,11 @@ print "Staging script for Aruba switches \n"
 print "Scanning for active IP addresses \n"
 
 starting_address = raw_input("Please enter X as starting address (192.168.0.X): ")
-print ("The starting address is 192.168.0." + starting_address)
+if starting_address <= 255 and starting_address > 0:
+	print ("The starting address is 192.168.0." + starting_address)
+	print ("lol")
+else:
+	print ("The given starting address is out of range.")
 
 ending_address = raw_input("Please enter X as ending address (192.168.0.X): ")
 print ("The starting address is 192.168.0." + ending_address)

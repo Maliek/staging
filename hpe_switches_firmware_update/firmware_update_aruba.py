@@ -6,20 +6,17 @@ import time
 print "Staging script for Aruba switches \n"
 print "Scanning for active IP addresses \n"
 
-while True:
-	try:		
-		starting_address = input("Please enter X as starting address (192.168.0.X): ")
-		if starting_address <= 255 and starting_address > 0:
-			print ("The starting address is 192.168.0." + starting_address)
-			break
-		else:
-			print ("The given starting address is out of range.")
-			continue
-	except ValueError:
-		print ("Please enter a number")
+while True:		
+	starting_address = raw_input("Please enter X as starting address (192.168.0.X): ")
+	if starting_address <= 255 and starting_address > 0:
+		print ("The starting address is 192.168.0." + starting_address)
+		break
+	else:
+		print ("The given starting address is out of range.")
+		continue
 
 while True:
-	ending_address = input("Please enter X as ending address (192.168.0.X): ")
+	ending_address = raw_input("Please enter X as ending address (192.168.0.X): ")
 	if ending_address > starting_address and ending_address <= 255 and ending_address > 0:
 		print ("The starting address is 192.168.0." + ending_address)
 		break

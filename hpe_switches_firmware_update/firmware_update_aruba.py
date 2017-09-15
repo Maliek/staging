@@ -34,7 +34,7 @@ for x in range(int(starting_address),int(ending_address)):
 		file = open("ip-addr.txt", "w")
 		file.write("192.168.0." + str(x))
 		file.close()
-		print "Starting staging script (staging_script)"
+		print "Starting staging script (staging_script.sh)"
 		var1 = "192.168.0." + str(x)
 		print var1
 		subprocess.call(['gnome-terminal', '-x','./staging_script.sh', var1])

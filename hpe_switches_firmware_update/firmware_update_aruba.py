@@ -8,10 +8,7 @@ print "Scanning for active IP addresses \n"
 
 while True:		
 	starting_address = raw_input("Please enter X as starting address (192.168.0.X): ")
-	if int(starting_address) < 256:
-		print ("The starting address is 192.168.0." + starting_address)
-		break
-	elif int(starting_address) < 0:
+	if int(starting_address) < 256 and int(starting_address) >= 0:
 		print ("The starting address is 192.168.0." + starting_address)
 		break
 	else:

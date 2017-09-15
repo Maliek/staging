@@ -8,23 +8,23 @@ print "Scanning for active IP addresses \n"
 
 while True:		
 	starting_address = raw_input("Please enter X as starting address (192.168.0.X): ")
-	if starting_address <= 255 and starting_address > 0:
+	if int(starting_address) < 256:
+		print ("The starting address is 192.168.0." + starting_address)
+		break
+	elif int(starting_address) < 0:
 		print ("The starting address is 192.168.0." + starting_address)
 		break
 	else:
 		print ("The given starting address is out of range.")
-		continue
 
 while True:
 	ending_address = raw_input("Please enter X as ending address (192.168.0.X): ")
-	if ending_address > starting_address and ending_address <= 255 and ending_address > 0:
+	if int(ending_address) > int(starting_address) and int(ending_address) <= 255 and int(ending_address) > 0:
 		print ("The starting address is 192.168.0." + ending_address)
 		break
 	else:
 		print ("The given ending address is not possible.")
 		continue
-
-
 
 for x in range(int(starting_address),int(ending_address)):
 	print ("Pinging 192.168.0." + str(x))

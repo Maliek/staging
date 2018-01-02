@@ -5,7 +5,7 @@ echo "remote"
 sleep 5
 echo "SecureLink!"
 sleep 5
-echo "request system software add ftp://192.168.0.1/jinstall-ex-4200-15.1R5.5-domestic-signed.tgz"
+echo "request system software add ftp://<host>/<version.tgz>"
 sleep 360
 echo "request system reboot"
 sleep 20

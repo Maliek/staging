@@ -25,7 +25,7 @@ echo "SecureLink!"
 sleep 2
 echo ""
 sleep 1
-echo "request system snapshot slice alternate"
+echo "request system snapshot recovery"
 sleep 60
 echo ""
 sleep 2
